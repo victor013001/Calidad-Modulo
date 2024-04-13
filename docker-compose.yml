@@ -1,0 +1,13 @@
+version: '3'
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe:21
+    ports:
+      - "1522:1521"
+    environment:
+      - ORACLE_PASSWORD=oracle
+    networks:
+      - oracle
+networks:
+  oracle:
+    name: oracle
